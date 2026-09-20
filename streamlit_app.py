@@ -20,7 +20,7 @@ st.markdown(
 )
 
 components.iframe(
-    "https://projeto-lar-consciente.laryssaramos2807.chatgpt.site/",
+    "https://projeto-lar-consciente.laryssaramos2807.chatgpt.site/?versao=3",
     height=1200,
     scrolling=True,
 )
