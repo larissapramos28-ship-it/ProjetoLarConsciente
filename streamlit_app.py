@@ -1,9 +1,12 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
+SITE_URL = "https://projeto-lar-consciente.laryssaramos2807.chatgpt.site"
+admin_mode = st.query_params.get("painel") == "administrativo"
+
 st.set_page_config(
-    page_title="Projeto Lar Consciente",
-    page_icon="🏠",
+    page_title="Painel Administrativo" if admin_mode else "Projeto Lar Consciente",
+    page_icon="🔐" if admin_mode else "🏠",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -19,8 +22,10 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+page_url = f"{SITE_URL}/login.html?versao=6" if admin_mode else f"{SITE_URL}/?versao=6"
+
 components.iframe(
-    "https://projeto-lar-consciente.laryssaramos2807.chatgpt.site/?versao=5",
+    page_url,
     height=1200,
     scrolling=True,
 )
