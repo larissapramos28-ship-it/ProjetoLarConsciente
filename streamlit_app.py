@@ -22,7 +22,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-page_url = f"{SITE_URL}/login.html?versao=8" if admin_mode else f"{SITE_URL}/?versao=8"
+page_url = f"{SITE_URL}/login.html?versao=10" if admin_mode else f"{SITE_URL}/?versao=10"
 
 components.iframe(
     page_url,
